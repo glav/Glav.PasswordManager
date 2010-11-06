@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwdMgr-UI-Prottype", "PwdMgr-UI-Prottype\PwdMgr-UI-Prottype.csproj", "{1C4A66B8-58B0-4AEA-8EF1-4A6CDDC51217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwdMgr-UI-ProttypeScreens", "PwdMgr-UI-Prottype\PwdMgr-UI-ProttypeScreens\PwdMgr-UI-ProttypeScreens.csproj", "{BDDE840E-1D71-4EF1-9E37-34C3148C0540}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C4A66B8-58B0-4AEA-8EF1-4A6CDDC51217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4A66B8-58B0-4AEA-8EF1-4A6CDDC51217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4A66B8-58B0-4AEA-8EF1-4A6CDDC51217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4A66B8-58B0-4AEA-8EF1-4A6CDDC51217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDDE840E-1D71-4EF1-9E37-34C3148C0540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDE840E-1D71-4EF1-9E37-34C3148C0540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDE840E-1D71-4EF1-9E37-34C3148C0540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDDE840E-1D71-4EF1-9E37-34C3148C0540}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

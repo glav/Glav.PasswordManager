@@ -1,0 +1,13 @@
+﻿<Window x:Class="PwdMgrWPF.PwdEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PwdMgrWPF" Height="108" Width="330" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
+  
+  
+    <Grid>
+    <Button HorizontalAlignment="Right" Margin="0,0,17,8" Name="btnOK" Width="75" Height="23" VerticalAlignment="Bottom" Click="btnOK_Clicked">OK</Button>
+    <Label Height="23.8" HorizontalAlignment="Left" Margin="11.64,8.2,0,0" Name="label1" VerticalAlignment="Top" Width="86.36">Passphrase:</Label>
+    <PasswordBox x:Name="txtPwd" Margin="108,6,13,0" Height="26" VerticalAlignment="Top" TabIndex="0" />
+    <Button Height="24" Margin="137,0,110,8" Name="btnCancel" VerticalAlignment="Bottom" Click="btnCancel_Clicked" >Cancel</Button>
+  </Grid>
+</Window>

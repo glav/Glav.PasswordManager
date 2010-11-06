@@ -1,0 +1,51 @@
+﻿<Application x:Class="PwdMgr_WPF_UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml"
+             xmlns:ViewModels="clr-namespace:PwdMgr_WPF_UI.ViewModels"
+             xmlns:Helpers="clr-namespace:PwdMgr_WPF_UI.Helpers"
+             xmlns:Commands="clr-namespace:PwdMgr_WPF_UI.Commands">
+            
+    <Application.Resources>
+        <ViewModels:MainWindowViewModel x:Key="MainWindowViewModel"  />
+        <ViewModels:PassphraseEntryViewModel x:Key="PassphraseEntryViewModel" />
+        <ViewModels:PasswordDetailViewModel x:Key="PasswordDetailViewModel" />
+        <ViewModels:AddNewPasswordViewModel x:Key="AddNewPasswordViewModel" />
+        <ViewModels:FindEntryViewModel x:Key="FindEntryViewModel" />
+        
+        <Helpers:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <Helpers:FindEntryStatusMessageColourConverter x:Key="FindEntryStatusMessageColourConverter" />
+        
+        <Commands:ExitCommand x:Key="ExitCommand" />
+        <Commands:OpenFileCommand x:Key="OpenFileCommand" />
+        <Commands:NewPasswordListCommand x:Key="NewPasswordListCommand" />
+        <Commands:OpenDetailWindowCommand x:Key="OpenDetailWindowCommand" />
+        <Commands:CopyToClipboardCommand x:Key="CopyToClipboardCommand" />
+        <Commands:MainOptionsToggleCommand x:Key="MainOptionsToggleCommand" />
+        <Commands:SettingsOptionsToggleCommand x:Key="SettingsOptionsToggleCommand" />
+        <Commands:DeletePasswordCommand x:Key="DeletePasswordCommand" />
+        <Commands:AddNewPasswordCommand x:Key="AddNewPasswordCommand" /> 
+        <Commands:SetPassphraseCommand x:Key="SetPassphraseCommand" />
+        <Commands:SaveFileCommand x:Key="SaveFileCommand" />
+        <Commands:MergeFilesCommand x:Key="MergeFilesCommand" /> 
+        <Commands:FindEntryCommand x:Key="FindEntryCommand" />
+        <Commands:FindTextInListCommand x:Key="FindTextInListCommand" />
+        
+        <LinearGradientBrush x:Key="MainOptionButtonBackground" EndPoint="1,0.5" StartPoint="0,0.5">
+          <GradientStop Color="#FFA4E196" Offset="0" />
+          <GradientStop Color="White" Offset="0.656" />
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="SettingButtonBackground" EndPoint="1,0.5" StartPoint="0,0.5">
+          <GradientStop Color="#FF96E1B9" Offset="0" />
+          <GradientStop Color="White" Offset="0.656" />
+        </LinearGradientBrush>
+        <Style x:Key="OptionButtonStyle" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+  </Application.Resources>
+</Application>
