@@ -5,7 +5,7 @@ using System.Text;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace PwdMgr_WPF_UI.Helpers
+namespace PasswordMgr.Helpers
 {
     public static class SecureStringHelper
     {

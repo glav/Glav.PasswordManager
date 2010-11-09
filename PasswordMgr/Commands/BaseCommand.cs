@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
-namespace PwdMgr_WPF_UI.Commands
+namespace PasswordMgr.Commands
 {
     public abstract class BaseCommand : ICommand
     {

@@ -10,11 +10,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using PwdMgr_WPF_UI.ViewModels;
-using PwdMgr_WPF_UI.Helpers;
+using PasswordMgr.ViewModels;
+using PasswordMgr.Helpers;
 using System.Security;
 
-namespace PwdMgr_WPF_UI
+namespace PasswordMgr
 {
     /// <summary>
     /// Interaction logic for PassphraseEntry.xaml

@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Data;
 using System.Windows;
 
-namespace PwdMgr_WPF_UI.Helpers
+namespace PasswordMgr.Helpers
 {
     [ValueConversion(typeof(Object), typeof(Visibility), ParameterType = typeof(string))]
     public class BoolToVisibilityConverter : IValueConverter

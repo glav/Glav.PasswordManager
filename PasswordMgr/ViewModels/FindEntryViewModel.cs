@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 using Glav.PasswordMgr.Engine;
 
-namespace PwdMgr_WPF_UI.ViewModels
+namespace PasswordMgr.ViewModels
 {
     class FindEntryViewModel : BaseViewModel
     {

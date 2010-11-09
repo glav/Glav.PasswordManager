@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Forms;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 
-namespace PwdMgr_WPF_UI.Commands
+namespace PasswordMgr.Commands
 {
     public class OpenFileCommand : BaseCommand
     {

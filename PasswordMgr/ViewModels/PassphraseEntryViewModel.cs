@@ -5,9 +5,9 @@ using System.Text;
 using System.Windows.Input;
 using System.Windows;
 using System.Security;
-using PwdMgr_WPF_UI.Helpers;
+using PasswordMgr.Helpers;
 
-namespace PwdMgr_WPF_UI.ViewModels
+namespace PasswordMgr.ViewModels
 {
     public class PassphraseEntryViewModel : BaseViewModel
     {

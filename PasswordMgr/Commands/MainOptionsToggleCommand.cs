@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PwdMgr_WPF_UI.ViewModels;
+using PasswordMgr.ViewModels;
 
-namespace PwdMgr_WPF_UI.Commands
+namespace PasswordMgr.Commands
 {
     class MainOptionsToggleCommand : BaseCommand
     {

@@ -10,10 +10,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using PwdMgr_WPF_UI.ViewModels;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.ViewModels;
+using PasswordMgr.Data;
 
-namespace PwdMgr_WPF_UI
+namespace PasswordMgr
 {
     /// <summary>
     /// Interaction logic for PasswordDetail.xaml

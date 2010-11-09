@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace PwdMgr_WPF_UI.Helpers
+namespace PasswordMgr.Helpers
 {
     [ValueConversion(typeof(Object), typeof(Brush))]
     public class FindEntryStatusMessageColourConverter : IValueConverter

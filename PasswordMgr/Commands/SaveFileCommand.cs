@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 
-namespace PwdMgr_WPF_UI.Commands
+namespace PasswordMgr.Commands
 {
     /// <summary>
     /// For this command, lets assu,e a parameter should be a bool which indicates whether to use the current filename (nasically a straight save)

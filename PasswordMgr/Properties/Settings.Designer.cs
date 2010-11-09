@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PwdMgr_WPF_UI.Properties
+namespace PasswordMgr.Properties
 {
 
 

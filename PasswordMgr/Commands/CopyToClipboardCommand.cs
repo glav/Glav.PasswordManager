@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Glav.PasswordMgr.Engine;
-using PwdMgr_WPF_UI.Helpers;
+using PasswordMgr.Helpers;
 using System.Windows.Forms;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 
-namespace PwdMgr_WPF_UI.Commands
+namespace PasswordMgr.Commands
 {
     class CopyToClipboardCommand : BaseCommand
     {

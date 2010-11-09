@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 using System.Security;
-using PwdMgr_WPF_UI.Helpers;
+using PasswordMgr.Helpers;
 
-namespace PwdMgr_WPF_UI.ViewModels
+namespace PasswordMgr.ViewModels
 {
     public class PasswordDetailViewModel : BaseViewModel
     {

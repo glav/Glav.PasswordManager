@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
-using PwdMgr_WPF_UI.ViewModels;
+using PasswordMgr.ViewModels;
 
-namespace PwdMgr_WPF_UI
+namespace PasswordMgr
 {
     /// <summary>
     /// Interaction logic for App.xaml

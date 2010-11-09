@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using System.Windows;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 using System.ComponentModel;
 
-namespace PwdMgr_WPF_UI.Commands
+namespace PasswordMgr.Commands
 {
     public class ExitCommand : BaseCommand
     {

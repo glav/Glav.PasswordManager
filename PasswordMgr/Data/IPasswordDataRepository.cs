@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Glav.PasswordMgr.Engine;
 
-namespace PwdMgr_WPF_UI.Data
+namespace PasswordMgr.Data
 {
     public interface IPasswordDataRepository
     {

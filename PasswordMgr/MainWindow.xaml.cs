@@ -11,10 +11,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PwdMgr_WPF_UI.ViewModels;
-using PwdMgr_WPF_UI.Commands;
+using PasswordMgr.ViewModels;
+using PasswordMgr.Commands;
 
-namespace PwdMgr_WPF_UI
+namespace PasswordMgr
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using System.ComponentModel;
-using PwdMgr_WPF_UI.Data;
+using PasswordMgr.Data;
 using Glav.PasswordMgr.Engine;
 using System.Windows;
-using PwdMgr_WPF_UI.Commands;
+using PasswordMgr.Commands;
 
-namespace PwdMgr_WPF_UI.ViewModels
+namespace PasswordMgr.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {

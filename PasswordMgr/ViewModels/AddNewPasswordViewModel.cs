@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PwdMgr_WPF_UI.ViewModels
+namespace PasswordMgr.ViewModels
 {
     public class AddNewPasswordViewModel : BaseViewModel
     {
