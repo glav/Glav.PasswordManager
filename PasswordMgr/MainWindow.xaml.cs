@@ -174,5 +174,10 @@ namespace PasswordMgr
             PasswordListView.ScrollIntoView(PasswordListView.SelectedItem);
         }
 
+        private void MinimiseButtonClick(object sender, RoutedEventArgs e)
+        {
+            WindowState = System.Windows.WindowState.Minimized;
+        }
+
     }
 }
