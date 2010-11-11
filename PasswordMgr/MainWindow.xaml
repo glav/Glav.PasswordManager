@@ -76,7 +76,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource OpenDetailWindowCommand}">
+                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" MouseEnter="PeekButton_MouseEnter" MouseLeave="PeekButton_MouseLeave">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Peek" Margin="40,5,15,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Chat.ico" HorizontalAlignment="Right" />

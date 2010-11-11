@@ -21,6 +21,8 @@ namespace PasswordMgr
     /// </summary>
     public partial class MainWindow : Window
     {
+        PeekWindow peekWin;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -177,6 +179,22 @@ namespace PasswordMgr
         private void MinimiseButtonClick(object sender, RoutedEventArgs e)
         {
             WindowState = System.Windows.WindowState.Minimized;
+        }
+
+        private void PeekButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            peekWin = new PeekWindow();
+            peekWin.Show();
+
+        }
+
+        private void PeekButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (peekWin != null)
+            {
+                peekWin.Close();
+            }
+
         }
 
     }
