@@ -8,6 +8,7 @@ using PasswordMgr.Data;
 using Glav.PasswordMgr.Engine;
 using System.Windows;
 using PasswordMgr.Commands;
+using System.Security;
 
 namespace PasswordMgr.ViewModels
 {

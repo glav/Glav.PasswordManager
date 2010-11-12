@@ -183,7 +183,7 @@ namespace PasswordMgr
 
         private void PeekButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            peekWin = new PeekWindow();
+            peekWin = new PeekWindow(ViewModel.PasswordContainer.CurrentPasswordData);
             peekWin.Show();
 
         }
@@ -193,6 +193,7 @@ namespace PasswordMgr
             if (peekWin != null)
             {
                 peekWin.Close();
+                peekWin = null;
             }
 
         }
