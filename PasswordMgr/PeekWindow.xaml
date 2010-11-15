@@ -1,7 +1,7 @@
 ﻿<Window x:Class="PasswordMgr.PeekWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="PeekWindow" Height="100" Width="400" BorderBrush="Transparent" WindowStyle="None">
+        Title="PeekWindow" Height="100" Width="400" BorderBrush="Transparent" WindowStyle="None" SizeToContent="Width">
     <Window.Resources>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="TextWrapping" Value="NoWrap"/>
@@ -14,8 +14,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
         
-        <StackPanel x:Name="peekPassword" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Grid.Row="0" Text="Peeking..." FontSize="11" Margin="10,3,0,0" />
+        <StackPanel Grid.Row="1" x:Name="peekPassword" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <!--<TextBlock Text="test stuff"></TextBlock>-->
         </StackPanel>
     </Grid>

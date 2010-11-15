@@ -31,10 +31,13 @@ namespace PasswordMgr.ViewModels
             switch (e.PropertyName)
             {
                 case "NumberOfPasswords":
-                    RaisePropertyChanged("IsDataAvailable");
+                    RaisePropertyChanged("IsDataAvailable","IsPeekOptionEnabled");
                     break;
                 case "PasswordList":
-                    RaisePropertyChanged("IsDataAvailable");
+                    RaisePropertyChanged("IsDataAvailable","IsPeekOptionEnabled");
+                    break;
+                case "Current":
+                    RaisePropertyChanged("IsPeekOptionEnabled");
                     break;
             }
         }
@@ -42,6 +45,11 @@ namespace PasswordMgr.ViewModels
         public bool IsDataAvailable
         {
             get { return (PasswordContainer.NumberOfPasswords > 0); }
+        }
+
+        public bool IsPeekOptionEnabled
+        {
+            get { return (IsDataAvailable && PasswordContainer.Current != null); }
         }
 
         internal void ExecuteSelectionDoubleClickCommand(Point mousePoint)
@@ -87,6 +95,8 @@ namespace PasswordMgr.ViewModels
         {
             get { return (SettingsOptionsToggleSwitch ? Visibility.Collapsed : Visibility.Visible); }
         }
+
+
 
         private Point _currentMousePosition;
         public Point CurrentMousePosition

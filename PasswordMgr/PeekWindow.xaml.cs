@@ -22,7 +22,7 @@ namespace PasswordMgr
     {
         SecureString _password;
 
-        public PeekWindow()
+        public PeekWindow() : base()
         {
             InitializeComponent();
         }
@@ -40,11 +40,24 @@ namespace PasswordMgr
                 var pwdArray = GetCharacterDataFromSecureString(_password);
                 if (pwdArray != null && pwdArray.Length > 0)
                 {
-                    foreach (var pwdChar in pwdArray)
+                    for (var pCnt = 0; pCnt < pwdArray.Length; pCnt++)
                     {
-                        peekPassword.Children.Add(new TextBlock() { Text = pwdChar.ToString() });
+                        var pwdChar = pwdArray[pCnt];
+                        var charToAdd = new TextBlock() { Text = pwdChar.ToString()};
+                        if (pCnt == 0)
+                            charToAdd.Margin = new Thickness(10,0,0,0);
+                        if (pCnt == pwdArray.Length-1)
+                            charToAdd.Margin = new Thickness(0,0,10,0);
+                        peekPassword.Children.Add(charToAdd);
+                        pwdArray[pCnt] = '\0';
                     }
+
                 }
+            }
+            else
+            {
+                peekPassword.Children.Add(new TextBlock() { Text = "- No Password Defined -" });
+
             }
 
             base.OnContentRendered(e);
@@ -52,6 +65,9 @@ namespace PasswordMgr
 
         private char[] GetCharacterDataFromSecureString(SecureString secureData)
         {
+            if (secureData.Length < 1)
+                return null;
+
             char[] bytes = new char[secureData.Length];
             IntPtr ptr = IntPtr.Zero;
 

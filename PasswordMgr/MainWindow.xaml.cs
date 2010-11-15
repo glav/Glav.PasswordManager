@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using PasswordMgr.ViewModels;
 using PasswordMgr.Commands;
+using Forms=System.Windows.Forms;
 
 namespace PasswordMgr
 {
@@ -183,9 +184,28 @@ namespace PasswordMgr
 
         private void PeekButton_MouseEnter(object sender, MouseEventArgs e)
         {
-            peekWin = new PeekWindow(ViewModel.PasswordContainer.CurrentPasswordData);
-            peekWin.Show();
+            if (peekWin == null)
+            {
+                const int topOffset = 80;
+                const int leftOffset = 30;
 
+                peekWin = new PeekWindow(ViewModel.PasswordContainer.CurrentPasswordData);
+                peekWin.Owner = this;
+                var pos = e.MouseDevice.GetPosition(this);
+                peekWin.Top = this.Top + pos.Y - topOffset;
+                peekWin.Left = this.Left + pos.X + leftOffset;
+                if (this.WindowState == System.Windows.WindowState.Maximized)
+                {
+                    peekWin.Top = pos.Y - topOffset;
+                    peekWin.Left = leftOffset;
+                    peekWin.Left = pos.X + leftOffset;
+                }
+
+                if (peekWin.Top < 0)
+                    peekWin.Top = topOffset;
+
+                peekWin.Show();
+            }
         }
 
         private void PeekButton_MouseLeave(object sender, MouseEventArgs e)
