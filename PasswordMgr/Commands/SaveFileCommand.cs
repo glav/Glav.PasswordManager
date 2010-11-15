@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PasswordMgr.Data;
+using System.Windows;
 
 namespace PasswordMgr.Commands
 {
@@ -14,6 +15,8 @@ namespace PasswordMgr.Commands
     {
         public override void Execute(object parameter)
         {
+            MessageBox.Show("save not fully implemented");
+
             bool useCurrentFilename = true;
             if (parameter != null)
             {
@@ -32,6 +35,7 @@ namespace PasswordMgr.Commands
             if (useCurrentFilename)
             {
                 PasswordDataRepository.Current.PasswordContainer.SaveFile();
+                MessageBox.Show(string.Format("Passwords saved to: {0}",PasswordDataRepository.Current.PasswordContainer.Filename));
             }
             else
             {

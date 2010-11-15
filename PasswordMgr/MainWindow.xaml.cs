@@ -146,7 +146,6 @@ namespace PasswordMgr
         }
         private void SaveCommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("save not implemented");
             ExecuteCommand(AppCommand.SaveFile);
         }
         private void FindCommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
