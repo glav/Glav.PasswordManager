@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using PasswordMgr.Data;
 using System.Windows;
+using Forms=System.Windows.Forms;
 
 namespace PasswordMgr.Commands
 {
@@ -15,8 +16,6 @@ namespace PasswordMgr.Commands
     {
         public override void Execute(object parameter)
         {
-            MessageBox.Show("save not fully implemented");
-
             bool useCurrentFilename = true;
             if (parameter != null)
             {
@@ -28,19 +27,40 @@ namespace PasswordMgr.Commands
                 {
                     useCurrentFilename = true;
                 }
-
             }
 
-            //TODO: Need to ensure we have a valid passphrase before saving
             if (useCurrentFilename)
             {
-                PasswordDataRepository.Current.PasswordContainer.SaveFile();
-                MessageBox.Show(string.Format("Passwords saved to: {0}",PasswordDataRepository.Current.PasswordContainer.Filename));
+                // verify the filename exists
+                if (string.IsNullOrWhiteSpace(PasswordDataRepository.Current.PasswordContainer.Filename))
+                    useCurrentFilename = false;
             }
-            else
+
+            try
             {
-                //TODO: implement save-as type functionality
+                if (useCurrentFilename)
+                {
+                    PasswordDataRepository.Current.PasswordContainer.SaveFile();
+                }
+                else
+                {
+                    Forms.SaveFileDialog saveAsDlg = new Forms.SaveFileDialog();
+                    saveAsDlg.DefaultExt = ".pgr";
+                    saveAsDlg.AddExtension = true;
+                    saveAsDlg.Filter = "Password Manager Files|*.pgr|All Files|*.*";
+                    if (saveAsDlg.ShowDialog() == Forms.DialogResult.OK)
+                    {
+                        PasswordDataRepository.Current.PasswordContainer.SaveFile(saveAsDlg.FileName);
+                    }
+                }
+                MessageBox.Show(string.Format("Passwords saved to: {0}", PasswordDataRepository.Current.PasswordContainer.Filename));
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("Could not save your password file.\n{0}", ex.Message), "Error Saving your passwords", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
 
         }
     }

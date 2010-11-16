@@ -21,21 +21,24 @@ namespace PasswordMgr
     public partial class PeekWindow : Window
     {
         SecureString _password;
+        string _passwordTitle;
 
         public PeekWindow() : base()
         {
             InitializeComponent();
         }
 
-        public PeekWindow(SecureString passwordToShow)
+        public PeekWindow(SecureString passwordToShow, string passwordTitle)
             : this()
         {
             _password = passwordToShow;
+            _passwordTitle = passwordTitle;
         }
 
         protected override void OnContentRendered(EventArgs e)
         {
-            if (_password != null)
+            PasswordTitle.Text = _passwordTitle;
+            if (_password != null && _password.Length > 0)
             {
                 var pwdArray = GetCharacterDataFromSecureString(_password);
                 if (pwdArray != null && pwdArray.Length > 0)
@@ -56,7 +59,7 @@ namespace PasswordMgr
             }
             else
             {
-                peekPassword.Children.Add(new TextBlock() { Text = "- No Password Defined -" });
+                peekPassword.Children.Add(new TextBlock() { Text = " - No Password Defined - " });
 
             }
 

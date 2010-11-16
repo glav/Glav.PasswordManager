@@ -69,7 +69,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}">
+                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource SaveFileCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Save" Margin="40,5,15,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Save.ico" HorizontalAlignment="Right" />

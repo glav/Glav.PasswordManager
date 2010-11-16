@@ -188,7 +188,7 @@ namespace PasswordMgr
                 const int topOffset = 80;
                 const int leftOffset = 30;
 
-                peekWin = new PeekWindow(ViewModel.PasswordContainer.CurrentPasswordData);
+                peekWin = new PeekWindow(ViewModel.PasswordContainer.CurrentPasswordData, ViewModel.PasswordContainer.CurrentTitle);
                 peekWin.Owner = this;
                 var pos = e.MouseDevice.GetPosition(this);
                 peekWin.Top = this.Top + pos.Y - topOffset;

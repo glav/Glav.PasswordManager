@@ -18,8 +18,12 @@
             <RowDefinition Height="20" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Peeking at " FontSize="11" Margin="10,3,0,0" />
+            <TextBlock x:Name="PasswordTitle" FontSize="11" Margin="4,3,10,0 " FontWeight="Bold" />
+        </StackPanel>
         
-        <TextBlock Grid.Row="0" Text="Peeking..." FontSize="11" Margin="10,3,0,0" />
         <StackPanel Grid.Row="1" x:Name="peekPassword" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <!--<TextBlock Text="test stuff"></TextBlock>-->
         </StackPanel>

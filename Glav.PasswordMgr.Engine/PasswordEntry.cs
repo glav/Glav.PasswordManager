@@ -183,10 +183,17 @@ namespace Glav.PasswordMgr.Engine
             info.AddValue(FLDNAME_COMMENT, _comment);
             info.AddValue(FLDNAME_MODDATETIME, _modifiedDateTime);
 
-            char[] data = PasswordEntry.GetCharacterData(_passwordData);
-            info.AddValue(FLDNAME_PWDDATA, data.Clone());
+            if (_passwordData != null && _passwordData.Length > 0)
+            {
+                char[] data = PasswordEntry.GetCharacterData(_passwordData);
+                info.AddValue(FLDNAME_PWDDATA, data.Clone());
+                ZeroClearArray(data);
+            }
+            else
+            {
+                info.AddValue(FLDNAME_PWDDATA, string.Empty.ToCharArray());
+            }
 
-            ZeroClearArray(data);
         }
 
         #endregion
