@@ -83,10 +83,10 @@ namespace Glav.PasswordMgr.Engine.Crypto
             }
             finally
             {
-                if (cryptStream != null)
-                    cryptStream.Close();
                 if (readStream != null)
                     readStream.Close();
+                if (cryptStream != null)
+                    cryptStream.Close();
             }
 
             return data;

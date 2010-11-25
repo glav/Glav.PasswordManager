@@ -8,6 +8,7 @@ using System.IO;
 using System.Security;
 using System.ComponentModel;
 using System.Data.Linq;
+using System.Linq;
 
 namespace Glav.PasswordMgr.Engine
 {
@@ -213,20 +214,17 @@ namespace Glav.PasswordMgr.Engine
         {
             get
             {
-                //TODO: Refactor this container for a proper/better IsModified implementation. Will do for now.
-                var hasChanged = _dataChanged;
-                if (!hasChanged)
+                if (!_dataChanged)
                 {
                     foreach (var pwd in _entryList.Values)
                     {
                         if (pwd.IsDataModified)
                         {
-                            hasChanged = true;
-                            break;
+                            return true;
                         }
                     }
                 }
-                return hasChanged;
+                return _dataChanged;
             }
         }
 
@@ -457,9 +455,10 @@ namespace Glav.PasswordMgr.Engine
             Crypto.CryptoContainer crypt = new Glav.PasswordMgr.Engine.Crypto.CryptoContainer(this._passPhrase);
 
             crypt.EncryptToFile(filename, fileData);
-            _dataChanged = false;
             _filename = filename;
             _dataChanged = false;
+
+            _entryList.Values.Where(p => p.IsDataModified == true).ToList().ForEach(p => p.IsDataModified = false);
         }
 
         public void SaveFile()

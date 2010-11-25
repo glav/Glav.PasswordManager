@@ -39,7 +39,7 @@ namespace PasswordMgr.Commands
                         {
                             PasswordDataRepository.Current.PasswordContainer.LoadFile(filename);
                         }
-                        catch
+                        catch (Exception ex)
                         {
                             System.Windows.MessageBox.Show("Cannot open password file.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
