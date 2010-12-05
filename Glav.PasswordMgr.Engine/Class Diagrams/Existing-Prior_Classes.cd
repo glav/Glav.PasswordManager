@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Glav.PasswordMgr.Engine.Globals.DataFileVersion">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Globals.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAABAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Glav.PasswordMgr.Engine.Configuration.ConfigMgr">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Configuration\ConfigMgr.cs</FileName>
+      <HashCode>AgABgKCAAIgaAAACgIIAIABACBCAAABAACAAYAAACkI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Glav.PasswordMgr.Engine.Globals.FileVersions">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Globals.cs</FileName>
+      <HashCode>AAABAEAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

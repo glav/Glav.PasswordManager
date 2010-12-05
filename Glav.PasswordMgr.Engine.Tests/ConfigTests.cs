@@ -72,8 +72,8 @@ namespace Glav.PasswordMgr.Engine.Tests
 
             Assert.IsTrue(ConfigMgr.PositionLeft == LEFTPOS,"Saved Left Position is " + ConfigMgr.PositionLeft.ToString() + " but it should be " + LEFTPOS.ToString());
             Assert.IsTrue(ConfigMgr.PositionTop == TOPPOS, "Saved Top Position is " + ConfigMgr.PositionTop.ToString() + " but it should be " + TOPPOS.ToString());
-            Assert.IsTrue(ConfigMgr.SizeHeight == WIDTH, "Saved Width is " + ConfigMgr.SizeWidth.ToString() + " but it should be " + WIDTH.ToString());
-            Assert.IsTrue(ConfigMgr.SizeWidth == HEIGHT, "Saved Height is " + ConfigMgr.SizeHeight.ToString() + " but it should be " + HEIGHT.ToString());
+            Assert.IsTrue(ConfigMgr.SizeHeight == HEIGHT, "Saved Width is " + ConfigMgr.SizeWidth.ToString() + " but it should be " + WIDTH.ToString());
+            Assert.IsTrue(ConfigMgr.SizeWidth == WIDTH, "Saved Height is " + ConfigMgr.SizeHeight.ToString() + " but it should be " + HEIGHT.ToString());
             Assert.IsTrue(ConfigMgr.RequirePwdOnMaximise == REQUIREPWDENTRY,"Saved RequirePasswordOnMaximise is " + ConfigMgr.RequirePwdOnMaximise.ToString() + " but it should be " + REQUIREPWDENTRY.ToString());
         }
 
