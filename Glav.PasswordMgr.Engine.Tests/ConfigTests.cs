@@ -61,7 +61,14 @@ namespace Glav.PasswordMgr.Engine.Tests
         [TestMethod]
         public void LoadFile()
         {
+            ConfigMgr.PositionLeft = LEFTPOS;
+            ConfigMgr.PositionTop = TOPPOS;
+            ConfigMgr.SizeWidth = WIDTH;
+            ConfigMgr.SizeHeight = HEIGHT;
+            ConfigMgr.RequirePwdOnMaximise = REQUIREPWDENTRY;
+
             ConfigMgr.Save();
+            
             ConfigMgr.PositionLeft = -1;
             ConfigMgr.PositionTop = -1;
             ConfigMgr.SizeWidth = -1;
