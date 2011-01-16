@@ -153,8 +153,8 @@
                             </LinearGradientBrush>
                         </StackPanel.Background>
                         <!--<TextBlock Text="{Binding PasswordContainer.ListTitle}" FontSize="14" Foreground="#FF1D3279" Visibility="{Binding IsPasswordItemSelected, Converter={StaticResource BoolToVisibilityConverter}}" />-->
-                        <TextBox Text="{Binding PasswordContainer.ListTitle, Mode=TwoWay}" FontSize="14" Foreground="#FF1D3279" Visibility="{Binding IsPasswordItemSelected, Converter={StaticResource BoolToVisibilityConverter}}" Background="Transparent" />
-                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsPasswordItemSelected, Converter={StaticResource BoolToVisibilityConverter}}">
+                        <TextBox Text="{Binding PasswordContainer.ListTitle, Mode=TwoWay}" FontSize="14" Foreground="#FF1D3279" Visibility="{Binding IsDataAvailable, Converter={StaticResource BoolToVisibilityConverter}}" Background="Transparent" />
+                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsDataAvailable, Converter={StaticResource BoolToVisibilityConverter}}">
                             <TextBlock Text="Number of passwords loaded: " Foreground="#FF1D3279" />
                             <TextBlock Text="{Binding PasswordContainer.NumberOfPasswords}" Foreground="#FF1D3279" />
                         </StackPanel>
