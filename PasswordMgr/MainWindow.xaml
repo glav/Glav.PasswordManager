@@ -1,7 +1,7 @@
 ﻿<Window x:Class="PasswordMgr.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="450" Width="457" WindowStyle="None" DataContext="{StaticResource MainWindowViewModel}" 
+        Title="MainWindow" Height="449" Width="457" WindowStyle="None" DataContext="{StaticResource MainWindowViewModel}" 
             MouseMove="Window_MouseMove" Closing="Window_Closing" Loaded="Window_Loaded">
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="NewCommandBinding_Executed" />
@@ -118,7 +118,7 @@
                                 <Image Source="/PasswordMgr;component/Images/Rename.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
-                        <Button Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}">
+                        <Button Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource PreferencesCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Preferences" Margin="20,5,5,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Config-Tools.ico" HorizontalAlignment="Right" />

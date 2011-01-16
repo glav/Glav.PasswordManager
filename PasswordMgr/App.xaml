@@ -30,6 +30,7 @@
         <Commands:MergeFilesCommand x:Key="MergeFilesCommand" /> 
         <Commands:FindEntryCommand x:Key="FindEntryCommand" />
         <Commands:FindTextInListCommand x:Key="FindTextInListCommand" />
+        <Commands:PreferencesCommand x:Key="PreferencesCommand" />
         
         <LinearGradientBrush x:Key="MainOptionButtonBackground" EndPoint="1,0.5" StartPoint="0,0.5">
           <GradientStop Color="#FFA4E196" Offset="0" />
