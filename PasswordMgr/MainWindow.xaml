@@ -69,7 +69,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource SaveFileCommand}">
+                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource SaveFileCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Save" Margin="40,5,15,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Save.ico" HorizontalAlignment="Right" />
@@ -106,13 +106,13 @@
                         </Button.Background>
                     </Button>
                     <StackPanel Visibility="{Binding IsSettingsOptionsCollapsed}">
-                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Grid.Row="1" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource SetPassphraseCommand}">
+                        <Button IsEnabled="{Binding IsDataAvailable}" Grid.Row="1" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource SetPassphraseCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Passphrase" Margin="20,5,5,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Login.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
-                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Grid.Row="2" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource MergeFilesCommand}">
+                        <Button IsEnabled="{Binding IsDataAvailable}" Grid.Row="2" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource MergeFilesCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Merge Files" Margin="20,5,5,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Rename.ico" HorizontalAlignment="Right" />
