@@ -197,8 +197,12 @@ namespace Glav.PasswordMgr.Engine
             get { return _listTitle; }
             set
             {
-                _listTitle = value;
-                OnPropertyChanged("ListTitle");
+                if (value != _listTitle)
+                {
+                    _listTitle = value;
+                    _dataChanged = true;
+                    OnPropertyChanged("ListTitle");
+                }
             }
         }
 
