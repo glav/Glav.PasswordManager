@@ -31,13 +31,13 @@ namespace PasswordMgr.ViewModels
             switch (e.PropertyName)
             {
                 case "NumberOfPasswords":
-                    RaisePropertyChanged("IsDataAvailable","IsPeekOptionEnabled");
+                    RaisePropertyChanged("IsDataAvailable", "IsPasswordItemSelected");
                     break;
                 case "PasswordList":
-                    RaisePropertyChanged("IsDataAvailable","IsPeekOptionEnabled");
+                    RaisePropertyChanged("IsDataAvailable", "IsPasswordItemSelected");
                     break;
                 case "Current":
-                    RaisePropertyChanged("IsPeekOptionEnabled");
+                    RaisePropertyChanged("IsPasswordItemSelected");
                     break;
             }
         }
@@ -47,7 +47,7 @@ namespace PasswordMgr.ViewModels
             get { return (PasswordContainer.NumberOfPasswords > 0); }
         }
 
-        public bool IsPeekOptionEnabled
+        public bool IsPasswordItemSelected
         {
             get { return (IsDataAvailable && PasswordContainer.Current != null); }
         }

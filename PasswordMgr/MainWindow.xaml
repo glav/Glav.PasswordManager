@@ -55,35 +55,35 @@
                                 <Image Source="/PasswordMgr;component/Images/Symbol-Add.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
-                        <Button Style="{StaticResource OptionButtonStyle}" IsEnabled="{Binding IsDataAvailable}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource OpenDetailWindowCommand}" CommandParameter="{Binding CurrentMousePosition}">
+                        <Button Style="{StaticResource OptionButtonStyle}" IsEnabled="{Binding IsPasswordItemSelected}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource OpenDetailWindowCommand}" CommandParameter="{Binding CurrentMousePosition}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Edit" Margin="40,5,15,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Edit.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
 
-                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource DeletePasswordCommand}">
+                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource DeletePasswordCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Delete" Margin="35,5,10,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Symbol-Restricted.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
 
-                        <Button IsEnabled="{Binding IsDataAvailable}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource SaveFileCommand}">
+                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource SaveFileCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Save" Margin="40,5,15,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Save.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
 
-                        <Button IsEnabled="{Binding IsPeekOptionEnabled}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" MouseEnter="PeekButton_MouseEnter" MouseLeave="PeekButton_MouseLeave">
+                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" MouseEnter="PeekButton_MouseEnter" MouseLeave="PeekButton_MouseLeave">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Peek" Margin="40,5,15,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Chat.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
-                        
-                        <Button IsEnabled="{Binding IsDataAvailable}" Grid.Row="7" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource CopyToClipboardCommand}" Height="50">
+
+                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Grid.Row="7" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource MainOptionButtonBackground}" Command="{StaticResource CopyToClipboardCommand}" Height="50">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Copy to Clipboard" Margin="20,5,5,5"  HorizontalAlignment="Left" TextWrapping="Wrap" Width="50" TextAlignment="Center" />
                                 <Image Source="/PasswordMgr;component/Images/Copy.ico" HorizontalAlignment="Right" Width="30" />
@@ -106,13 +106,13 @@
                         </Button.Background>
                     </Button>
                     <StackPanel Visibility="{Binding IsSettingsOptionsCollapsed}">
-                        <Button IsEnabled="{Binding IsDataAvailable}" Grid.Row="1" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource SetPassphraseCommand}">
+                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Grid.Row="1" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource SetPassphraseCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Passphrase" Margin="20,5,5,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Login.ico" HorizontalAlignment="Right" />
                             </StackPanel>
                         </Button>
-                        <Button IsEnabled="{Binding IsDataAvailable}" Grid.Row="2" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource MergeFilesCommand}">
+                        <Button IsEnabled="{Binding IsPasswordItemSelected}" Grid.Row="2" Style="{StaticResource OptionButtonStyle}" Background="{StaticResource SettingButtonBackground}" Command="{StaticResource MergeFilesCommand}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Merge Files" Margin="20,5,5,5"  HorizontalAlignment="Left" />
                                 <Image Source="/PasswordMgr;component/Images/Rename.ico" HorizontalAlignment="Right" />
@@ -152,8 +152,9 @@
                                 <GradientStop Color="#FFFCFFFC" Offset="1" />
                             </LinearGradientBrush>
                         </StackPanel.Background>
-                        <TextBlock Text="{Binding PasswordContainer.ListTitle}" FontSize="14" Foreground="#FF1D3279" Visibility="{Binding IsDataAvailable, Converter={StaticResource BoolToVisibilityConverter}}" />
-                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsDataAvailable, Converter={StaticResource BoolToVisibilityConverter}}">
+                        <!--<TextBlock Text="{Binding PasswordContainer.ListTitle}" FontSize="14" Foreground="#FF1D3279" Visibility="{Binding IsPasswordItemSelected, Converter={StaticResource BoolToVisibilityConverter}}" />-->
+                        <TextBox Text="{Binding PasswordContainer.ListTitle, Mode=TwoWay}" FontSize="14" Foreground="#FF1D3279" Visibility="{Binding IsPasswordItemSelected, Converter={StaticResource BoolToVisibilityConverter}}" Background="Transparent" />
+                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsPasswordItemSelected, Converter={StaticResource BoolToVisibilityConverter}}">
                             <TextBlock Text="Number of passwords loaded: " Foreground="#FF1D3279" />
                             <TextBlock Text="{Binding PasswordContainer.NumberOfPasswords}" Foreground="#FF1D3279" />
                         </StackPanel>
