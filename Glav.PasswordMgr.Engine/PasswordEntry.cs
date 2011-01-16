@@ -256,6 +256,8 @@ namespace Glav.PasswordMgr.Engine
 
         protected void OnPropertyChanged(string propertyName)
         {
+            _modifiedDateTime = DateTime.Now;
+
             if (PropertyChanged != null)
             {
                 PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
