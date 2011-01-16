@@ -18,7 +18,7 @@ namespace PasswordMgr.Commands
             {
                 using (OpenFileDialog openDialog = new OpenFileDialog())
                 {
-                    openDialog.Filter = "Password Manager|*.pgr|All Files|*.*";
+                    openDialog.Filter = Constants.OpenDialogFilter;
                     if (openDialog.ShowDialog() == DialogResult.OK)
                     {
                         filename = openDialog.FileName;

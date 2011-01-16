@@ -10,6 +10,17 @@ namespace PasswordMgr.Commands
     {
         public override void Execute(object parameter)
         {
+            string filename = null;
+
+            using (OpenFileDialog openDialog = new OpenFileDialog())
+            {
+                openDialog.Filter = Constants.OpenDialogFilter ;
+                if (openDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filename = openDialog.FileName;
+                }
+            }
+
             MessageBox.Show("Not Implemented", "Ba bow...");
         }
     }
