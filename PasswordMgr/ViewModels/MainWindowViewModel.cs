@@ -126,7 +126,6 @@ namespace PasswordMgr.ViewModels
         {
             // Did we specify a file to load on the command line?
             string[] cmdline = Environment.GetCommandLineArgs();
-            throw new Exception("shit");
             if (cmdline.Length > 1)
             {
                 // make sure the file specified is valid
