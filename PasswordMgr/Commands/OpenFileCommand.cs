@@ -29,7 +29,10 @@ namespace PasswordMgr.Commands
             if (!string.IsNullOrEmpty(filename))
             {
                 PassphraseEntry passphraseDialog = new PassphraseEntry();
-                passphraseDialog.Owner = App.Current.MainWindow;
+                if (passphraseDialog != App.Current.MainWindow && App.Current.MainWindow.IsVisible)
+                {
+                    passphraseDialog.Owner = App.Current.MainWindow;
+                }
                 if (passphraseDialog.ShowDialog() == true)
                 {
                     if (passphraseDialog.IsPassphraseValid)
