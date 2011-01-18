@@ -12,6 +12,15 @@
         <CommandBinding Command="ApplicationCommands.Copy" Executed="CopyToClipCommandBinding_Executed" />
         <CommandBinding Command="ApplicationCommands.Delete" Executed="DeleteCommandBinding_Executed" />
     </Window.CommandBindings>
+    
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FF41AB41"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="#FF809B89"/>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
